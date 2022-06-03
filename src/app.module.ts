@@ -7,12 +7,6 @@ import { ProductsModule } from './products/products.module';
 @Module({
   imports: [UsersModule, ProductsModule],
   controllers: [AppController],
-  providers: [
-    AppService,
-    {
-      provide: 'TASKS',
-      useFactory: async() => {}
-    }
-  ],
+  providers: [AppService],
 })
 export class AppModule {}
